@@ -33,11 +33,12 @@ mongoose.connect('mongodb://Test:123456789@ds137435.mlab.com:37435/movieworld', 
 //   res.send("hello world")
 // })
 
-app.get('*',function (req,res) {
-  res.sendFile(path.join(__dirname + '/public/app/views/index.html'))
+app.get('/',function (req,res) {
+  res.sendFile(path.join(__dirname + '/public/index.html'))
   // dirname e segashnata direktoeiq  + publick e kade se namira htmla koito da otvori 
   //tesla5 
 })
+
 app.listen(port, function () {
   console.log("Running sesssssssrver " + port)
 })
