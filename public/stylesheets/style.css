@@ -164,3 +164,85 @@ body {
 .navbar-collapse{ clear:both;}
   
 }
+
+.input-group{
+  margin-top: 10px;
+}
+
+.tip{
+  width: 40%;
+  margin: auto;
+}
+
+.modalContainer{
+  margin-top: 80px;
+}
+
+.index-social{
+  background-color:#2c2c2c;
+  color:#fff;
+}
+.link-area .fa-li{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  border:solid 1px #262727;
+  list-style-type:none;
+  margin:5px;
+  display:inline-block;
+}
+.index-social a{
+  color:#fff;
+  font-size:25px;
+  display:block;
+  float:left;
+  padding:10px;
+}
+.index-link h3{
+  text-align:center;
+ color:#f1f1f1;
+ text-align:left;
+ 
+}
+.index-link{
+  background-color:#262727;
+}
+.index-link ul{
+  padding:0px;
+}
+.index-link ul li{
+  list-style-type:none;
+}
+.index-link p{
+  color: bisque;
+  
+}
+.index-link ul li a{
+text-decoration:none;
+font-size:16px;
+color:#fff;
+display:block;
+padding:5px 0;
+text-align:left;
+}
+.index-link ul li a:hover{
+   color: bisque;
+}
+.copy-c{
+  padding-top:15px;
+}
+
+.link-area li a img{
+  width: 38px;
+  border-radius: 50%;
+}
+
+/* main{
+  position: relative;
+} */
+
+footer{
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
