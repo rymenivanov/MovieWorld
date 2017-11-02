@@ -1,8 +1,11 @@
-var User =require('../app/model/userModel')
-module.exports = function(router){
+var express = require('express');
+var router = express.Router();
+
+var User = require('../app/model/userModel')
+
 //http//localhost:5000/users    tuk testvai s uploada , koito shte pravi fronta da napravi dolnite regexi
     router.put('/users',function (req,res) {
-    var user = new User()
+    var user = new User();
     user.username=req.body.username
     user.password=req.body.password
     user.email=req.body.email;
@@ -25,5 +28,5 @@ module.exports = function(router){
     //  ako iskate da vidite dali vliza v iffa shte vi izkara edinichno suobshtenie sus res.send i shte crashne bazata zaredi responce headera
     
   })
-  return router    
-}
+
+  module.exports = router;

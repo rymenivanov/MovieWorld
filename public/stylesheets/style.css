@@ -176,7 +176,7 @@ body {
 }
 
 .modalContainer{
-  margin-top: 80px;
+  margin-top: 58px;
 }
 
 .index-social{
@@ -290,4 +290,26 @@ section.awSlider > img{
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
   opacity:.5;
+}
+.btn-info{
+  border-color: grey;
+}
+.searchBtn, .searchBtn:active:focus, .btn-info, .btn-info:focus{
+  background-color: grey;
+  border-color: grey;
+}
+
+.searchBtn:hover, .btn-info:hover{
+  background-color: #4F4F4F;
+  border-color: #4f4f4f;
+}
+
+.angularRepeatDiv{
+  background-color: green;
+  height: 300px;
+}
+
+.angularRepeatDiv img{
+  width:100px;
+  padding: 20px;
 }
