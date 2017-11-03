@@ -292,24 +292,31 @@ section.awSlider > img{
   opacity:.5;
 }
 .btn-info{
-  border-color: grey;
+  border-color: #262727;
 }
 .searchBtn, .searchBtn:active:focus, .btn-info, .btn-info:focus{
-  background-color: grey;
-  border-color: grey;
+  background-color: #262727;
+  border-color: #262727;
+  width: 127px;
+  height: 43px;
+  margin-top: 6px;
+  
 }
 
 .searchBtn:hover, .btn-info:hover{
-  background-color: #4F4F4F;
-  border-color: #4f4f4f;
+  background-color: transparent;
+  color: #ca3f02;
+  border-color: #262727;
 }
 
 .angularRepeatDiv{
-  background-color: green;
+  background-color: lightblue;
   height: 300px;
+  overflow: auto;
+  width: 583px;
 }
 
-.angularRepeatDiv img{
-  width:100px;
+.angularRepeatDiv img, searchActors img{
+  width: 100px;
   padding: 20px;
 }
