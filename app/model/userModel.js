@@ -4,7 +4,8 @@ var bcrypt = require('bcrypt-nodejs')
 var UserSchema = new Schema({
     username: { type: String, lowercase: true, required: true, unique: true },
     password: { type: String, required: true },
-    email: { type: String, required: true, unique: true }
+    email: { type: String, required: true, unique: true },
+    favoriteMovies:{type:Array}
 })
 //suzdavaneto na konstruktor stava kato se definira promenliva  mongoose.model('User', UserSchema) i se suzdade noviqt obekt
 // var testUser = mongoose.model('User', UserSchema);

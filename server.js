@@ -4,14 +4,18 @@ var port = process.env.PORT || 5000
 var morgan = require('morgan')
 var mongoose = require('mongoose')
 var User = require('./app/model/userModel')
+var Actor = require('./app/model/actrorModel')
 var bodyParser = require('body-parser');
 var router = express.Router();
 var appRoutes = require("./app/routes/api")(router)
+var actorsRoutes = require("./app/routes/actorApi")(router)
+var movieRoutes = require("./app/routes/movieApi")(router)
 var path =require('path')
 var monk = require('monk');
 
 var db = monk('Test:123456789@ds137435.mlab.com:37435/movieworld')
 var users =db.get("users")
+var actors = db.get("Actors")
 
 app.use(morgan('dev'))
 app.use(bodyParser.json());
@@ -45,6 +49,8 @@ var actors = require('./routes/actors')
 
 app.use('/movies', movies);
 app.use('/api',appRoutes)
+app.use('/actorsApi',actorsRoutes)
+app.use('/movieApi',movieRoutes)
 app.use('/users', users);
 app.use('/actors', actors);
 //tests
