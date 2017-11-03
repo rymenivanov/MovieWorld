@@ -161,6 +161,10 @@ body {
   background: none;
 }
 
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
+  color: #a2a2a2;
+  background-color: #171616;
+}
 @media(max-width:768px){
 .navbar-collapse{ clear:both;}
   
@@ -239,7 +243,7 @@ text-align:left;
 }
 
 footer{
-  margin-top: 200px;
+  clear: both;
 }
 
 section.awSlider .carousel{
@@ -261,6 +265,8 @@ section.awSlider{
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  float: right;
+  padding-bottom: 100px;
 }
 
 section.awSlider:hover > img{
@@ -310,13 +316,18 @@ section.awSlider > img{
 }
 
 .angularRepeatDiv{
-  background-color: lightblue;
+  background-color: #360F0F;
   height: 300px;
   overflow: auto;
   width: 583px;
+  opacity:0.8;
 }
 
-.angularRepeatDiv img, searchActors img{
+.angularRepeatDiv span{
+  color: white;
+}
+
+.angularRepeatDiv img{
   width: 100px;
   padding: 20px;
 }

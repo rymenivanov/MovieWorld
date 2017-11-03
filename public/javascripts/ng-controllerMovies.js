@@ -1,4 +1,4 @@
-var app = angular.module("myApp", []);
+var app = angular.module("moviesApp", []);
 app.controller("moviesModal", function ($scope, $http) {
 
     $http.get('/movies').then(function (data) {
