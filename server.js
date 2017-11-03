@@ -9,7 +9,9 @@ var router = express.Router();
 var appRoutes = require("./app/routes/api")(router)
 var path =require('path')
 var monk = require('monk');
+
 var db = monk('Test:123456789@ds137435.mlab.com:37435/movieworld')
+var users =db.get("users")
 
 app.use(morgan('dev'))
 app.use(bodyParser.json());
@@ -22,13 +24,13 @@ app.use(express.static(__dirname + '/public'));
 
 //http://localhost:5000/api/users
  
-// mongoose.connect('mongodb://Test:123456789@ds137435.mlab.com:37435/movieworld', function (Error) {
-//   if (Error) {
-//     console.log("not connected to db" + Error)
-//   } else {
-//     console.log("connected to mongo db ne se plashete ot teksta gore ne e error")
-//   }
-// })
+mongoose.connect('mongodb://Test:123456789@ds137435.mlab.com:37435/movieworld', function (Error) {
+  if (Error) {
+    console.log("not connected to db" + Error)
+  } else {
+    console.log("connected to mongo db ne se plashete ot teksta gore ne e error")
+  }
+})
 
 // var db = mongoose.connect('mongodb://Test:123456789@ds137435.mlab.com:37435/movieworld');
 app.use(function(req, res, next){
