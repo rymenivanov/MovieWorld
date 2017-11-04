@@ -7,10 +7,11 @@ router.get('/', function(req, res, next) {
     var db = req.db;
    
     var movies = db.get('movies');
-    movies.find({} , {} , function(err,docs){
+    movies.find({} , {sort:'name'} , function(err,docs){
         res.json(docs);
     })
 
 });
+
 
 module.exports = router;

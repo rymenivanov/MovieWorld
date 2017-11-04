@@ -15,7 +15,7 @@ var monk = require('monk');
 
 var db = monk('Test:123456789@ds137435.mlab.com:37435/movieworld')
 var users =db.get("users")
-var actors = db.get("Actors")
+var actors = db.get("actors")
 
 app.use(morgan('dev'))
 app.use(bodyParser.json());
@@ -45,6 +45,7 @@ app.use(function(req, res, next){
 var movies = require('./routes/movies');
 var users = require('./routes/users');
 var actors = require('./routes/actors')
+var singleMovie = require('./routes/singleMovie')
 
 
 app.use('/movies', movies);
@@ -53,6 +54,8 @@ app.use('/actorsApi',actorsRoutes)
 app.use('/movieApi',movieRoutes)
 app.use('/users', users);
 app.use('/actors', actors);
+app.use('/singleMovie', singleMovie)
+
 //tests
 // app.get('/home', function (req, res) {
 //   res.send("Helsslo from home")
