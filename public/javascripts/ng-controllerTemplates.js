@@ -1,4 +1,4 @@
-var app = angular.module("myApp", ['ngRoute','moviesApp']);
+var app = angular.module("myApp", ['ngRoute','moviesApp', 'inTheatersApp']);
  
 app.config(function ($routeProvider) {
     $routeProvider
@@ -8,6 +8,9 @@ app.config(function ($routeProvider) {
         })
         .when('/moviestmpl', {
             templateUrl: 'views/moviesTmpl.htm'
+        })
+        .when('/intheaters', {
+            templateUrl: 'views/inTheaters.htm'
         })
 });
 

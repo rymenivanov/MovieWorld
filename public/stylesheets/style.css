@@ -265,7 +265,7 @@ section.awSlider{
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  float: right;
+  float: left;
   padding-bottom: 100px;
 }
 
@@ -331,3 +331,15 @@ section.awSlider > img{
   width: 100px;
   padding: 20px;
 }
+
+.moviePrint{
+  float: right;
+  width: 900px;
+  padding-top: 60px;
+}
+
+.moviesInT{
+  float: left;
+  padding: 20px;
+}
+

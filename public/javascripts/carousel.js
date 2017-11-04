@@ -1,7 +1,7 @@
 $(function(){
     $('section.awSlider .carousel').carousel({
         pause: "hover",
-      interval: 2000
+      interval: 3000
     });
     
     var startImage = $('section.awSlider .item.active > img').attr('src');

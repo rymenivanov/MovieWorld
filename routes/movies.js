@@ -6,7 +6,7 @@ router.get('/', function(req, res, next) {
     console.log('123')
     var db = req.db;
    
-    var movies = db.get('Movies');
+    var movies = db.get('movies');
     movies.find({} , {} , function(err,docs){
         res.json(docs);
     })
