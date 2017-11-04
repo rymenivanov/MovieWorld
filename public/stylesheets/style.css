@@ -331,3 +331,103 @@ section.awSlider > img{
   width: 100px;
   padding: 20px;
 }
+.social-login {
+  text-align: center;
+  font-size: 12px;
+}
+
+.social-login p {
+  margin: 15px 0;
+}
+
+.social-login ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.social-login ul li {
+  width: 33%;
+  float: left;
+  clear: fix;
+}
+
+.social-login ul li a {
+  font-size: 13px;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 0;
+  display: block;
+}
+
+.social-login ul li:nth-child(1) a {
+  background: #3b5998;
+}
+
+.social-login ul li:nth-child(2) a {
+  background: #dc4e41;
+}
+
+.social-login ul li:nth-child(3) a {
+  background: #1dcaff;
+}
+
+.sa-innate-form input[type=text],
+input[type=password],
+input[type=file],
+textarea,
+select,
+email {
+  font-size: 13px;
+  padding: 10px;
+  border: 1px solid#ccc;
+  outline: none;
+  width: 100%;
+  margin: 8px 0;
+}
+
+.sa-innate-form input[type=submit] {
+  border: 1px solid#e64b3b;
+  background: #e64b3b;
+  color: #fff;
+  padding: 10px 25px;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.sa-innate-form input[type=submit]:hover {
+  border: 1px solid#db3b2b;
+  background: #db3b2b;
+  color: #fff;
+}
+
+.sa-innate-form button {
+  background-color: rgba(7, 45, 79, 0.75);
+  /* border: 1px solid; */
+  background-color: rgba(7, 59, 107, 0.75);            
+  color: #fff;
+  padding: 10px 25px;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.sa-innate-form button:hover {
+  /* border: 1px solid#db3b2b; */
+  background: khaki;
+  color: #fff;
+}
+
+.sa-innate-form p {
+  font-size: 13px;
+  padding-top: 10px;
+}
+
+@media(max-width:767px) {
+  
+}
+
+@media(min-width:767px) {
+  #loginBlockFrom {
+      width: 230px;
+  }
+}
