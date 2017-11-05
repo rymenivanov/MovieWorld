@@ -1,4 +1,3 @@
-
 const KEY = BanMePlz
 function getMovieInfo(movieTitle) {
     return new Promise(function (resolve, reject) {

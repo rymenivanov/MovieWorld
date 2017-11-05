@@ -22,4 +22,5 @@ app.controller("moviesModal", function ($scope, $http) {
         return ($scope.typedText === substring);
 
     };
+
 });

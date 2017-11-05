@@ -18,7 +18,7 @@
                     <h3 style="text-align: center;">{{m.name}}</h3>
                     <h4 style="text-align: center;">({{m.date}})</h4>
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{m.plot}}</p>
-                    <button class="showInfo" id="{{m._id}}">More Info</button>
+                    <button class="showInfo" id="{{m._id}}" ng-click="getMovieInfo(m.name)">More Info</button>
                 </div>
             </div>
         </div>
