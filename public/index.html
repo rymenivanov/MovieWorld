@@ -28,7 +28,6 @@
 </head>
 
 <body ng-app="myApp">
-    <!-- <h1>Doest itss work</h1> -->
     <div class="container-fluid">
         <div class="row">
             <div class="navbar navbar-default navbar-fixed-top">
@@ -142,11 +141,13 @@
                         </div>
                     </div>
                     <div class="angularRepeatDiv" ng-controller="moviesModal" ng-show="search.name">
-                        <div ng-repeat='m in movies | filter:search'>
-                            <img class="searchMovies" ng-src="{{m.poster}}" alt="">
-                            <a href="#!/searchedMovie">{{m.name}}</a>
-                            <span>({{m.date}})</span>
-                            <span>{{m.cast[0]}}</span>
+                        <div ng-controller="searchedMovie">
+                            <div ng-repeat='m in movies | filter:search'>
+                                <img class="searchMovies" ng-src="{{m.poster}}" alt="">
+                                <a href="#!/searchedMovie" ng-click="getMovieInfo(m.name)">{{m.name}}</a>
+                                <span>({{m.date}})</span>
+                                <span>{{m.cast[0]}}</span>
+                            </div>
                         </div>
                         <div ng-repeat='a in actors | filter:search'>
                             <img class="searchMovies" ng-src="{{a.picture}}" alt="">

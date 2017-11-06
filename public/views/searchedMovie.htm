@@ -1,3 +1,23 @@
 <div ng-controller="searchedMovie">
-    
+    <div class="content container singleMoviePrint">
+        <img ng-src="{{movieFromSearch.Poster}}" alt="">
+        <div class="innerContent">
+            <h2>{{movieFromSearch.Title}} ({{movieFromSearch.Year}})</h2>
+            <h4>Rated:&nbsp;{{movieFromSearch.Rated}}</h4>
+            <h4>Genre:&nbsp;{{movieFromSearch.Genre}}</h4>
+            <h4>Ratings:</h4>
+            <ul>
+                <li><img src="/images/imdb.png" alt="IMDB Rating">&nbsp;&nbsp;{{movieFromSearch.Ratings[0].Source}}:&nbsp;{{movieFromSearch.Ratings[0].Value}}</li>
+                <li><img src="/images/rotten_tomatoes.png" alt="Rotten Tomatoes Rating">&nbsp;&nbsp;{{movieFromSearch.Ratings[1].Source}}:&nbsp;{{movieFromSearch.Ratings[0].Value}}</li>
+                <li><img src="/images/metacritic.png" alt="Metacritic Rating">&nbsp;&nbsp;{{movieFromSearch.Ratings[2].Source}}:&nbsp;{{movieFromSearch.Ratings[0].Value}}</li>
+            </ul>
+            <h4>Plot:</h4>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;{{movieFromSearch.Plot}}</p>
+            <span>Director:&nbsp;{{movieFromSearch.Director}}</span>
+            <span>Writer:&nbsp;{{movieFromSearch.Writer}}</span>
+            <h4>Cast</h4>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;{{movieFromSearch.Actors}}</p>
+            <a href="{{movieFromSearch.Website}}">Link to original site</a>
+        </div>
+    </div>
 </div>

@@ -8,6 +8,9 @@ app.config(function ($routeProvider) {
         .when('/omdbMovie', {
             templateUrl: 'views/omdbTmpl.htm'
         })
+        .when('/searchedMovie', {
+            templateUrl: 'views/searchedMovie.htm'
+        })
         .when('/moviestmpl', {
             templateUrl: 'views/moviesTmpl.htm'
         })
@@ -17,9 +20,7 @@ app.config(function ($routeProvider) {
         .when('/allactors', {
             templateUrl: 'views/allActors.htm'
         })
-        .when('/searchedMovie', {
-            templateUrl: 'views/searchedMovie.htm'
-        })
+
 
 });
 

@@ -255,7 +255,7 @@ section.awSlider .carousel{
 }
 
 section.awSlider{
-  margin:30px auto;
+  margin-right: 80px;
   padding:30px;
   position:relative;
   display:table;
