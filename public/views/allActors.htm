@@ -1,23 +1,20 @@
-<!-- <div class="container-fluid actorsAll" ng-controller="allActors">
-    <h3 style="text-align: center;">Actors</h3>
-    <div ng-repeat='a in actors'>
-        <a href="#"><img class="posters" src="{{a.picture}}" alt=""></a>
-    </div>
-</div> -->
-
-
 <div ng-controller="allActors">
     <h3 style="text-align: center;">Actors</h3>
     <div ng-repeat='a in actors'>
         <div style="float: left;" class="flip-container" ontouchstart="this.classList.toggle('hover');">
             <div class="flipper">
                 <div class="front">
-                    <img class="posters" src="{{a.picture}}" alt="">
+                    <img class="posters" ng-src="{{a.picture}}" alt="">
                 </div>
                 <div class="back">
                     <h3 style="text-align: center;">{{a.name}}</h3>
+                    <h4 style="text-align: center;">{{a.birthDate}}</h4>
                     <span>{{a.characteristics[0]}}, {{a.characteristics[1]}}, {{a.characteristics[2]}}</span>
-                    <button class="showInfo" id="{{m._id}}">More Info</button>
+                    <p>Country:&nbsp;&nbsp;{{a.country}}</p>
+                    <h5>Known from:</h5>
+                    <p>&nbsp;&nbsp;{{a.movies[0]}},&nbsp;{{a.movies[1]}},
+                        &nbsp;{{a.movies[2]}},&nbsp;{{a.movies[3]}},&nbsp;{{a.movies[4]}},
+                        &nbsp;{{a.movies[5]}},&nbsp;{{a.movies[6]}}</p>
                 </div>
             </div>
         </div>

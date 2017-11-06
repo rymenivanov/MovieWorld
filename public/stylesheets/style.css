@@ -477,6 +477,7 @@ email {
 	position: absolute;
 	top: 0;
     left: 0;
+    overflow: auto;
 }
 
 /* front pane, placed above back */
@@ -552,4 +553,21 @@ email {
   text-decoration: none;
   vertical-align: middle;
   border: none;
+}
+
+.singleMoviePrint{
+  color: bisque
+}
+
+.singleMoviePrint ul li{
+  list-style-type: none;
+}
+
+.singleMoviePrint ul li img{
+  width: 20px;
+}
+
+.singleMoviePrint>img{
+  float: right;
+  padding: 20px;
 }

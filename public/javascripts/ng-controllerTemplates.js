@@ -1,9 +1,12 @@
-var app = angular.module("myApp", ['ngRoute','moviesApp', 'inTheatersApp', 'actorsApp']);
+var app = angular.module("myApp", ['ngRoute','moviesApp', 'inTheatersApp', 'actorsApp', 'omdbApp', 'searchedMovieApp']);
  
 app.config(function ($routeProvider) {
     $routeProvider
         .when('/home', {
             templateUrl: 'views/home.htm'     
+        })
+        .when('/omdbMovie', {
+            templateUrl: 'views/omdbTmpl.htm'
         })
         .when('/moviestmpl', {
             templateUrl: 'views/moviesTmpl.htm'
@@ -14,5 +17,9 @@ app.config(function ($routeProvider) {
         .when('/allactors', {
             templateUrl: 'views/allActors.htm'
         })
+        .when('/searchedMovie', {
+            templateUrl: 'views/searchedMovie.htm'
+        })
+
 });
 

@@ -1,0 +1,23 @@
+<div ng-controller="inTheatersShow">
+    <div class="content container singleMoviePrint">
+        <img ng-src="{{movieToDisplay.Poster}}" alt="">
+        <div class="innerContent">
+            <h2>{{movieToDisplay.Title}} ({{movieToDisplay.Year}})</h2>
+            <h4>Rated:&nbsp;{{movieToDisplay.Rated}}</h4>
+            <h4>Genre:&nbsp;{{movieToDisplay.Genre}}</h4>
+            <h4>Ratings:</h4>
+            <ul>
+                <li><img src="/images/imdb.png" alt="IMDB Rating">&nbsp;&nbsp;{{movieToDisplay.Ratings[0].Source}}:&nbsp;{{movieToDisplay.Ratings[0].Value}}</li>
+                <li><img src="/images/rotten_tomatoes.png" alt="Rotten Tomatoes Rating">&nbsp;&nbsp;{{movieToDisplay.Ratings[1].Source}}:&nbsp;{{movieToDisplay.Ratings[0].Value}}</li>
+                <li><img src="/images/metacritic.png" alt="Metacritic Rating">&nbsp;&nbsp;{{movieToDisplay.Ratings[2].Source}}:&nbsp;{{movieToDisplay.Ratings[0].Value}}</li>
+            </ul>
+            <h4>Plot:</h4>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;{{movieToDisplay.Plot}}</p>
+            <span>Director:&nbsp;{{movieToDisplay.Director}}</span>
+            <span>Writer:&nbsp;{{movieToDisplay.Writer}}</span>
+            <h4>Cast</h4>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;{{movieToDisplay.Actors}}</p>
+            <a href="{{movieToDisplay.Website}}">Link to original site</a>
+        </div>
+    </div>
+</div>

@@ -22,6 +22,8 @@
     <script src='javascripts/ng-controllerTemplates.js'></script>
     <script src='javascripts/ng-controllerInTheaters.js'></script>
     <script src="javascripts/ng-controllerActors.js"></script>
+    <script src="javascripts/ng-controllerOMDB.js"></script>
+    <script src="javascripts/ng-controllerSearchedMovie.js"></script>
     <title>Document</title>
 </head>
 
@@ -72,7 +74,6 @@
                                 <ul class="dropdown-menu">
                                     <li><a href="#!/intheaters">In theaters</a></li>
                                     <li><a href="#">Latest trailers</a></li>
-                                    <li><a href="#!/allactors">Actors</a></li>
                                     <li><a href="#">Release calender</a></li>
                                     <li class="divider"></li>
                                     <li><a href="#">Top rated movies</a></li>
@@ -80,7 +81,7 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Chart &amp; Trends<b class="caret"></b></a>
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown">Chart &amp; Trends<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Oscar winers</a></li>
                                     <li><a href="#">Most popular movies</a></li>
@@ -91,12 +92,11 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">News &amp; Community<b class="caret"></b></a>
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown">News &amp; Community<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">News</a></li>
-                                    <li><a href="#">Photos</a></li>
+                                    <li><a href="#!/allactors">Actors</a></li>
                                     <li class="divider"></li>
-                                    <li><a href="#">Quizes</a></li>
+                                    <li><a href="#">Photos</a></li>
                                 </ul>
                             </li>
                             <li><a id="" href="#">Contact</a></li>
@@ -143,13 +143,13 @@
                     </div>
                     <div class="angularRepeatDiv" ng-controller="moviesModal" ng-show="search.name">
                         <div ng-repeat='m in movies | filter:search'>
-                            <img class="searchMovies" src="{{m.poster}}" alt="">
-                            <a href="#">{{m.name}}</a>
+                            <img class="searchMovies" ng-src="{{m.poster}}" alt="">
+                            <a href="#!/searchedMovie">{{m.name}}</a>
                             <span>({{m.date}})</span>
                             <span>{{m.cast[0]}}</span>
                         </div>
                         <div ng-repeat='a in actors | filter:search'>
-                            <img class="searchMovies" src="{{a.picture}}" alt="">
+                            <img class="searchMovies" ng-src="{{a.picture}}" alt="">
                             <a href="#">{{a.name}}</a>
                             <span>({{a.year}})</span>
                         </div>
