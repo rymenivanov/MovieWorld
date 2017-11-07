@@ -9,6 +9,6 @@ app.controller('searchedMovie', function ($scope, $http, $rootScope){
         $http.get('http://www.omdbapi.com/?t=' + movie + '&apikey=PlsBanMe').then(function(response){
             $rootScope.movieFromSearch = response.data;
             console.log($scope.movieFromSearch)
-        })
-    }
+        });
+    };
 })

@@ -1,0 +1,7 @@
+<div ng-controller="allTrailersCtrl">
+    <h3 style="text-align: center;">Latest Trailers</h3>
+    <div ng-repeat='t in trailers'>
+        <iframe width="854" height="480" ng-src="{{t.trailers | trustAsResourceUrl}}" frameborder="0" gesture="media" allowfullscreen></iframe>
+        
+    </div>
+</div>

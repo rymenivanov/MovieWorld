@@ -5,17 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-route.js"></script>
-    <!-- legacy angular -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script> -->
-    <!-- legacy angular -->
     <link rel="stylesheet" href="stylesheets/style.css">
     <script src="javascripts/carousel.js"></script>
     <script src='javascripts/ng-controllerMovies.js'></script>
@@ -24,6 +18,7 @@
     <script src="javascripts/ng-controllerActors.js"></script>
     <script src="javascripts/ng-controllerOMDB.js"></script>
     <script src="javascripts/ng-controllerSearchedMovie.js"></script>
+    <script src="javascripts/ng-conrollerTrailers.js"></script>
     <title>Document</title>
 </head>
 
@@ -37,7 +32,7 @@
                         <h1><a href="#">Movie World</a></h1>
                     </div>
 
-                    <!--Begin::Mobile View Navigation-->
+                    <!--Begin Mobile View Navigation-->
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
                         aria-expanded="false">
                         <span class="sr-only">Toggle navigation</span> 
@@ -45,9 +40,9 @@
                         <span class="icon-bar"></span> 
                         <span class="icon-bar"></span> 
                     </button>
-                    <!--End::Mobile View Navigation-->
+                    <!--End Mobile View Navigation-->
 
-                    <!--Begin::Header right-->
+                    <!--Begin Header right-->
                     <ul class="nav navbar-right pull-right top-nav">
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
@@ -62,10 +57,9 @@
                             </ul>
                         </li>
                     </ul>
-                    <!--End::Header Right-->
+                    <!--End Header Right-->
 
-
-                    <!--Begin::Nav-->
+                    <!--Begin Nav-->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-left">
                             <li class="dropdown">
@@ -95,7 +89,7 @@
                                 <ul class="dropdown-menu">
                                     <li><a href="#!/allactors">Actors</a></li>
                                     <li class="divider"></li>
-                                    <li><a href="#">Photos</a></li>
+                                    <li><a href="#!/allphotos">Photos</a></li>
                                 </ul>
                             </li>
                             <li><a id="" href="#">Contact</a></li>
@@ -116,11 +110,6 @@
     <main>
         <!-- Modal container -->
         <div class="container modalContainer">
-            <!-- Trigger the modal with a button -->
-            <!-- <button type="button" class="searchBtn btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">
-                <span class="glyphicon glyphicon-search"></span> Search
-            </button> -->
-
             <!-- Modal -->
             <div class="modal fade" id="myModal" role="dialog">
                 <div class="modal-dialog">
@@ -160,6 +149,7 @@
             </div>
         </div>
         <!-- End of modal container -->
+        <!-- Carousel -->
         <section class="awSlider">
             <div class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
@@ -205,6 +195,7 @@
                   </a>
             </div>
         </section>
+        <!-- End of Carousel -->
         <div ng-view></div>
     </main>
 
@@ -214,22 +205,22 @@
                 <div class="col-md-3">
                     <div class="link-area">
                         <h3>ABOUT US</h3>
-                        <p>Building Consensus among your Senior leaders to leverage your digital strengths and work on gaps
-                            which are hindering your growth.</p>
-                        <li class="fa-li"><a href="#"><img src="images/facebook.png" alt=""></a></li>
-                        <li class="fa-li"><a href="#"><img src="images/twitter1.png" alt=""></a></li>
-                        <li class="fa-li"><a href="#"><img src="images/instagram.png" alt=""></a></li>
+                        <p>Still learning how to code with JavaScript and doing our best.</p>
+                        <p>Antonio Dimitrov, Gergana Nikolova, Rumen Ivanov</p>
+                        <li class="fa-li"><a target="_blank" href="https://www.facebook.com"><img src="images/facebook.png" alt=""></a></li>
+                        <li class="fa-li"><a target="_blank" href="https://www.twitter.com"><img src="images/twitter1.png" alt=""></a></li>
+                        <li class="fa-li"><a target="_blank" href="https://www.instagram.com"><img src="images/instagram.png" alt=""></a></li>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="link-area">
-                        <h3>PRODUCT</h3>
+                        <h3>CATEGORIES</h3>
                         <ul>
-                            <li><a href="#"> Services-1</a></li>
-                            <li><a href="#"> Services-1</a></li>
-                            <li><a href="#"> Services-1</a></li>
-                            <li><a href="#"> Services-1</a></li>
-                            <li><a href="#"> Services-1</a></li>
+                            <li><a href="#!/intheaters"> In Theaters</a></li>
+                            <li><a href="#!/allactors"> Actors</a></li>
+                            <li><a href="#!/allphotos"> Photos</a></li>
+                            <li><a href="#"> Go to Search</a></li>
+
                         </ul>
                     </div>
                 </div>
@@ -263,13 +254,5 @@
     </div>
 
 </body>
-<!-- <script>
-    if (window.angular === undefined) {
-        console.log("Loaded angular")
-    }
-    else {
-        console.log("Not loaded Angular")
-    }
-</script> -->
 
 </html>

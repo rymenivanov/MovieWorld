@@ -1,9 +1,6 @@
 
 var Movie = require("../model/movieModel");
 module.exports = function(router) {
-  // za da se connectnete kum bazata danni prez cmd pishete ////////mongo ds137435.mlab.com:37435/movieworld -u Test -p 123456789 ///////////
-  /// ili vashite imena i paroli
-//   http://localhost:5000/movieApi/movie
   router.put("/movie", function(req, res) {
     var movie = new Movie();
     movie.name = req.body.name;
@@ -25,13 +22,13 @@ module.exports = function(router) {
       req.body.writer == null ||
       req.body.writer == ""
     ) {
-      res.send("ne ostavqi zadujitelnite poleta prazni");
+      res.send("Don't Leave Blank Spaces");
     } else {
       movie.save(function(Error) {
         if (Error) {
-          res.send("nevalidni danni" + Error);
+          res.send("Invalid Data" + Error);
         } else {
-          res.send("movie created");
+          res.send("Movie created");
         }
       });
     }

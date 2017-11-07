@@ -1,9 +1,6 @@
 
 var Actor = require("../model/actrorModel");
 module.exports = function(router) {
-  // za da se connectnete kum bazata danni prez cmd pishete ////////mongo ds137435.mlab.com:37435/movieworld -u Test -p 123456789 ///////////
-  /// ili vashite imena i paroli
-//   http://localhost:5000/actorsApi/actor
   router.put("/actor", function(req, res) {
     var actor = new Actor();
     actor.name = req.body.name;
@@ -21,13 +18,13 @@ module.exports = function(router) {
       req.body.year == null ||
       req.body.year == ""
     ) {
-      res.send("ne ostavqi prazni poleta");
+      res.send("Don't Leave Blank Spaces");
     } else {
       actor.save(function(Error) {
         if (Error) {
-          res.send("nevalidni danni" + Error);
+          res.send("Invalid Data" + Error);
         } else {
-          res.send("actor created");
+          res.send("Actor created");
         }
       });
     }

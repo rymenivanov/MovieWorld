@@ -10,6 +10,6 @@ var MovieSchema = new Schema({
     writer: { type: String,required: true},
     cast: { type: Array},    
     poster:{type:String}
-})
+});
 
-module.exports = mongoose.model('Movie', MovieSchema)
+module.exports = mongoose.model('Movie', MovieSchema);

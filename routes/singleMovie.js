@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
+/* GET one movie from database with _id. */
+
 router.get('/:_id', function (req, res) {
     var db = req.db;
     var collection = db.get('movies');
