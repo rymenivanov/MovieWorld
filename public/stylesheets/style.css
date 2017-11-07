@@ -566,3 +566,30 @@ email {
   width: 200px;
   margin: 15px;
 }
+
+.container-news{
+  border: 1px dotted white;
+  display: inline-block;
+  float: left;
+  width: 28%;
+  overflow: auto;
+  height: 300px;
+  margin: 1em;
+  border-radius: 1em;
+  padding: 0.5em;
+  font-size: 2em;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.photo-news{
+  width: 100%;
+  height: auto;
+  border-radius: 1em;
+}
+::-webkit-scrollbar {
+  width: 13px;
+  height: 13px;
+}
+.title-news{
+  text-decoration: underline;
+}
