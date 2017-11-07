@@ -1,0 +1,11 @@
+<div ng-controller="newsShow">
+    <h2 style="float: center;">Hollywood news</h2>
+    <div ng-repeat='n in news'>
+        <div style="float: center;" class="container-news">
+            <img ng-src="{{n.photo}}" alt="" class="photo-news">
+            <h2 style="text-align: center;" class="title-news">{{n.title}}</h2>
+            <br>
+            <span class="text-news">{{n.text}}</span>
+        </div>
+    </div>
+</div>
