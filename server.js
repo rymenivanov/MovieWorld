@@ -33,7 +33,7 @@ mongoose.connect('mongodb://Test:123456789@ds137435.mlab.com:37435/movieworld', 
   if (Error) {
     console.log("not connected to db" + Error)
   } else {
-    console.log("connected to mongo db ne se plashete ot teksta gore ne e error")
+    console.log("connected to mongo db")
   }
 })
 
@@ -75,7 +75,7 @@ app.get('/',function (req,res) {
 })
 
 app.listen(port, function () {
-  // console.log("Running sesssssssrver " + port)
+  console.log("Running sesssssssrver ")
 });
 
 module.exports = app;

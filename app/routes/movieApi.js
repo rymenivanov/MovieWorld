@@ -1,7 +1,8 @@
 
 var Movie = require("../model/movieModel");
 module.exports = function(router) {
-  router.put("/movie", function(req, res) {
+//   http://localhost:5000/movieApi/movie
+  router.post("/movie", function(req, res) {
     var movie = new Movie();
     movie.name = req.body.name;
     movie.genre = req.body.genre;
@@ -22,13 +23,13 @@ module.exports = function(router) {
       req.body.writer == null ||
       req.body.writer == ""
     ) {
-      res.send("Don't Leave Blank Spaces");
+      res.send("ne ostavqi zadujitelnite poleta prazni");
     } else {
       movie.save(function(Error) {
         if (Error) {
-          res.send("Invalid Data" + Error);
+          res.send("nevalidni danni" + Error);
         } else {
-          res.send("Movie created");
+          res.send("movie created");
         }
       });
     }

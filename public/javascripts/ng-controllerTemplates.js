@@ -1,4 +1,4 @@
-var app = angular.module("myApp", ['ngRoute','moviesApp', 'inTheatersApp', 'actorsApp', 'omdbApp', 'searchedMovieApp', 'trailersApp', 'newsApp']);
+var app = angular.module("myApp", ['ngRoute','moviesApp', 'inTheatersApp', 'actorsApp', 'omdbApp', 'searchedMovieApp', 'trailersApp', 'newsApp','loginApp','registerApp','addOneMovieApp','addOneActorApp']);
  
 app.config(function ($routeProvider) {
     $routeProvider
@@ -28,6 +28,18 @@ app.config(function ($routeProvider) {
         })
         .when('/', {
             templateUrl: 'views/news.htm'
+        })
+        .when('/login', {
+            templateUrl: 'views/login.htm'
+        })
+        .when('/register', {
+            templateUrl: 'views/register.htm'
+        })
+        .when('/addOneMovie', {
+            templateUrl: 'views/addOneMovie.htm'
+        })
+        .when('/addOneActor', {
+            templateUrl: 'views/addOneActor.htm'
         })
 });
 

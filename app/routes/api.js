@@ -1,6 +1,7 @@
 var User = require("../model/userModel")
 module.exports = function(router) {
-    router.put('/users', function (req, res) {
+    // http://localhost:port/api/users
+    router.post('/users', function (req, res) {
         var user = new User
         user.username = req.body.username
         user.password = req.body.password
@@ -8,14 +9,14 @@ module.exports = function(router) {
         if (req.body.username == null || req.body.username == ""
             || req.body.password == null || req.body.password == "" ||
             req.body.email == null || req.body.email == "") {
-            res.send("Don't Leave Blank Spaces")
+            res.send("ne ostavqi prazni poleta")
         }
         else {
             user.save(function (Error) {
                 if (Error) {
-                    res.send("Already Exist")
+                    res.send("ima pichaga s tova ime ili parola, katil")
                 } else {
-                    res.send("User created")
+                    res.send("user created")
                 }
             });
         }

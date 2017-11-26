@@ -1,7 +1,8 @@
 
 var Actor = require("../model/actrorModel");
 module.exports = function(router) {
-  router.put("/actor", function(req, res) {
+//   http://localhost:5000/actorsApi/actor
+  router.post("/actor", function(req, res) {
     var actor = new Actor();
     actor.name = req.body.name;
     actor.birthDate = req.body.birthDate;
@@ -15,16 +16,16 @@ module.exports = function(router) {
       req.body.birthDate == "" ||
       req.body.country == null ||
       req.body.country == "" ||
-      req.body.year == null ||
-      req.body.year == ""
+      req.body.movies == null ||
+      req.body.movies == ""
     ) {
-      res.send("Don't Leave Blank Spaces");
+      res.send("ne ostavqi prazni poleta");
     } else {
       actor.save(function(Error) {
         if (Error) {
-          res.send("Invalid Data" + Error);
+          res.send("nevalidni danni" + Error);
         } else {
-          res.send("Actor created");
+          res.send("actor created");
         }
       });
     }

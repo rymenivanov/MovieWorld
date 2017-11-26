@@ -21,7 +21,11 @@
     <script src="javascripts/ng-controllerSearchedMovie.js"></script>
     <script src="javascripts/ng-conrollerTrailers.js"></script>
     <script src="javascripts/ng-controllerNews.js"></script>
-    <title>Document</title>
+    <script src="javascripts/ng-controllerLogin.js"></script>
+    <script src="javascripts/ng-controllerRegister.js"></script>
+    <script src="javascripts/ng-controllerAddOneMovie.js"></script>
+    <script src="javascripts/ng-contollerAddOneActor.js"></script>
+    <title>Movie World</title>
 </head>
 
 <body ng-app="myApp">
@@ -47,15 +51,17 @@
                     <!--Begin Header right-->
                     <ul class="nav navbar-right pull-right top-nav">
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
-                                <img alt="" class="img-circle" src="images/admin_user.jpg" width="30"> 
-                                <span class="hidden-xs">Admin User</span> 
-                            </a>
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown">Add content<b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#"><i class="fa fa-fw fa-user"></i> Edit Profile</a></li>
-                                <li><a href="#"><i class="fa fa-fw fa-cog"></i> Change Password</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#"><i class="fa fa-fw fa-power-off"></i> Logout</a></li>
+                                <li><a href="#!/addOneMovie">Add Movie</a></li>
+                                <li><a href="#!/addOneActor">Add Actor</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown">Login/Register<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#!/login">Login</a></li>
+                                <li><a href="#!/register">Register</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -73,17 +79,6 @@
                                     <li class="divider"></li>
                                     <li><a href="#">Top rated movies</a></li>
                                     <li><a href="#">Top Box office</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="" class="dropdown-toggle" data-toggle="dropdown">Chart &amp; Trends<b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Oscar winers</a></li>
-                                    <li><a href="#">Most popular movies</a></li>
-                                    <li><a href="#">Most popular Tv shows</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="#">Born today</a></li>
-                                    <li><a href="#">Latest Posters</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">

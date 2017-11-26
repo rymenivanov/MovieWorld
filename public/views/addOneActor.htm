@@ -1,0 +1,31 @@
+<div ng-controller="addOneActor" style="width:600px;float:right">
+    <!-- change action  -->
+    <form method="post" action="/actorsApi/actor">
+        <div class="form-group">
+            <label>Actress/Actor name</label>
+            <input type="text" class="form-control" name="name" placeholder="Name">
+        </div>
+        <div class="form-group">
+            <label>Characteristics</label>
+            <input type="text" class="form-control" name="characteristics" placeholder="Characteristics">
+        </div>
+        <div class="form-group">
+            <label>Birth Date</label>
+            <input type="text" class="form-control" name="birthDate" placeholder="Birth Date">
+        </div>
+        <div class="form-group">
+            <label>Country </label>
+            <input type="text" class="form-control" name="country" placeholder="Country">
+        </div>
+        <div class="form-group">
+            <label>Link a picture</label>
+            <input type="text" class="form-control" name="picture" placeholder="Link source here">
+        </div>
+        <div class="form-group">
+            <label>Movies</label>
+            <input type="text" class="form-control" name="movies" placeholder="Movies">
+        </div>
+       <button type="submit" class="btn btn-default">Submit</button>
+
+    </form>
+</div>

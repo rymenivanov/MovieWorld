@@ -4,17 +4,24 @@
 // var logger = require('morgan');
 // var cookieParser = require('cookie-parser');
 // var bodyParser = require('body-parser');
-// var mongo = require('mongodb');
+// var session = require('express-session');
+// var mongodb = require('mongodb');
 // var monk = require('monk');
-// var db = monk('localhost:27017/movieworld')
+// var db = monk('localhost:27017/grandeDb');
 
+
+
+
+// // routes
 // var index = require('./routes/index');
 // var users = require('./routes/users');
-// var movies = require('./routes/movies');
+// var recipes = require('./routes/recipes');
+// var login = require('./routes/login');
+// var logout = require('./routes/logout');
 
 // var app = express();
 
-// app.use(function(req, res, next){
+// app.use(function(req, res, next) {
 //   req.db = db;
 //   next();
 // });
@@ -30,11 +37,24 @@
 // app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(cookieParser());
 // app.use(express.static(path.join(__dirname, 'public')));
+// app.use(session({secret: 'Simona1'}));
+
+// function requireLogin(req, res, next) {
+//   if (req.session.userId != undefined) {
+//     next();
+//   } else {
+//     res.redirect('/login');
+//   }
+// }
+
+// app.use('/login', login);
+
+// app.use('/', requireLogin, index);
+// app.use('/users', requireLogin, users);
+// app.use('/recipes', requireLogin, recipes);
+// app.use('/logout', requireLogin, logout);
 
 
-// // app.use('/', index);
-// // app.use('/users', users);
-// // app.use('/movies', movies)
 // // catch 404 and forward to error handler
 // app.use(function(req, res, next) {
 //   var err = new Error('Not Found');

@@ -1,0 +1,40 @@
+<div ng-controller="addOneMovie" style="width:600px;float:right">
+    
+        <!-- change action  -->
+        <form method="post" action="/movieApi/movie">
+            <div class="form-group">
+                <label>Name of the movie</label>
+                <input type="text" class="form-control" name="name" placeholder="Name of the movie">
+            </div>
+            <div class="form-group">
+                <label>Genre</label>
+                <input type="text" class="form-control" name="genre" placeholder="Genre">
+            </div>
+            <div class="form-group">
+                <label>Date</label>
+                <input type="text" class="form-control" name="date" placeholder="dd//mm//yy">
+            </div>
+            <div class="form-group">
+                <label>Plot</label>
+                <input type="text" class="form-control" name="plot" placeholder="Plot">
+            </div>
+            <div class="form-group">
+                    <label>Director</label>
+                    <input type="text" class="form-control" name="director" placeholder="Director">
+                </div>
+            <div class="form-group">
+                <label>Writer</label>
+                <input type="text" class="form-control" name="writer" placeholder="Writer">
+            </div>
+            <div class="form-group">
+                <label>Cast</label>
+                <input type="text" class="form-control" name="writer" placeholder="Writer">
+            </div>
+            <div class="form-group">
+                <label>Poster</label>
+                <input type="text" class="form-control" name="poster" placeholder="Poster">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+
+        </form>
+    </div>

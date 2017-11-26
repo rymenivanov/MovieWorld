@@ -479,12 +479,14 @@ email {
 
 /* back, initially hidden pane */
 .back {
-  padding: 10px;
+
   width: 222px;
   height: 308px;
     transform: rotateY(180deg);
     background: #410000;
-    color: #EBC67E
+    color: #EBC67E;
+    padding: 5px;
+    
 }
 
 /* end of flip cards */
